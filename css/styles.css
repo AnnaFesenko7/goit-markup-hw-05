@@ -401,7 +401,7 @@ img {
 
 /* .network-icon:hover,
 .network-icon:focus {
-  fill: var(--extra-title-color);
+ 
 } */
 
 /* clients */
@@ -542,8 +542,9 @@ address {
   border: 1px solid transparent;
   border-radius: 4px;
 
-  transition: background-color 250ms var(--timing-function);
-  transition: color 250ms var(--timing-function);
+  transition: background-color 2500ms var(--timing-function),
+    color 2500ms var(--timing-function);
+
   transition: box-shadow 250ms var(--timing-function);
 }
 
@@ -689,7 +690,7 @@ a {
 
 /* Modal window */
 .backdrop {
-  position: absolute;
+  position: fixed;
 
   top: 0;
   left: 0;
@@ -725,7 +726,18 @@ a {
   margin-top: 8px;
   margin-right: 8px;
 
-  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--extra-title-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .backdrop {
@@ -737,4 +749,7 @@ a {
   opacity: 0;
   pointer-events: none;
   /* visibility: hidden; */
+}
+
+.close-icon {
 }
